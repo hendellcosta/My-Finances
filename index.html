@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Finance$</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 id="logo">My Finance<span>$</span></h1>
+      <h4 id="summary">Manage your money!</h4>
+    </header>
+
+    <main class="container">
+      <section id="balance">
+        <h2 class="sr-only">Balance</h2>
+
+        <div class="card">
+          <h3>
+            <span>Incomed</span>
+            <img src="./assets/income.svg" alt="Incomes image" />
+          </h3>
+          <p id="incomeDisplay">0 €</p>
+        </div>
+
+        <div class="card">
+          <h3>
+            <span>Expansed</span>
+            <img src="./assets/expense.svg" alt="Expensed image" />
+          </h3>
+          <p id="expenseDisplay">0 €</p>
+        </div>
+
+        <div class="card total">
+          <h3>
+            <span>Available</span>
+            <img src="./assets/total.svg" alt="Total image" />
+          </h3>
+          <p id="totalDisplay"0 €> </p>
+        </div>
+      </section>
+
+      <section id="transactions">
+        <h2 class="sr-only">Transactions</h2>
+
+        <a href="#" 
+                onclick="Modal.open()"
+                class="button new">+ New Transaction</a>
+                
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Value</th>
+              <th>Date</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+
+    <div class="modal-negative-opacity">
+      <div class="modal">
+        <div id="form">
+          <h2>New Transaction</h2>
+          <form action="" onsubmit="Form.submit(event)">
+            <div class="input-group">
+              <label class="sr-only" for="description">Description</label>
+              <input
+                type="text"
+                id="description"
+                name="description"
+                placeholder="Description"
+              />
+            </div>
+
+            <div class="input-group">
+              <label class="sr-only" for="amount">Amount</label>
+              <input
+                type="number"
+                step="0.01"
+                id="amount"
+                name="amount"
+                placeholder="0,00"
+              />
+              <small class="help"
+                >Use "-" dash for expenses, and "," (coma) for decimal numbers</small>
+            </div>
+
+            <div class="input-group">
+              <label class="sr-only" for="date">Date</label>
+              <input type="date" id="date" name="date" placeholder="Date" />
+            </div>
+
+            <div class="input-group actions">
+              <a href="#" onclick="Modal.close(event)" class="button cancel"
+                >Cancel</a
+              >
+              <button>Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <a href="https://github.com/hendellcosta" target="_blank">
+        <p>Hendell Costa</p>
+      </a>
+    </footer>
+
+    <script src="./scripts.js"></script>
+  </body>
+</html>
