@@ -48,6 +48,10 @@ h2 {
   font-weight: normal;
 }
 
+#new-transaction {
+  color: rgb(0, 204, 10);
+}
+
 /*==== Links/Buttons ====*/
 a {
   color: #49ee0d;
@@ -290,6 +294,10 @@ input {
 .input-group.actions .button,
 .input-group.actions button {
   width: 48%;
+}
+
+.signals {
+  font-size: 1.3rem;
 }
 
 /*==== Footer ====*/
